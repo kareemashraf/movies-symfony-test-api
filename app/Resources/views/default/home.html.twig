@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="header">
+        <a class="home-header" href="{{ url('homepage') }}">Home</a>
+    </div>
+    <div id="wrapper">
+        <div id="container">
+            <div><h2>Enter a search Value: </h2></div>
+            <form method="post" action="/search/0">
+                {#<div id="search">#}
+                    {#<input type="text" name="search" required class="form-control" placeholder="Enter a search value"/>#}
+                    {#<button type="submit" class="btn btn-primary">Search</button>#}
+                {#</div>#}
+
+
+     <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-success" type="submit">Go!</button>
+      </span>
+      <input type="text" name="search" class="form-control " placeholder="Search by movie's title">
+     </div>
+
+
+            </form>
+
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body {
+            background: #F5F5F5;
+            font: 18px/1.5 sans-serif;
+        }
+
+        h1, h2 {
+            line-height: 1.2;
+            margin: 0 0 .5em;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 21px;
+            margin-bottom: 1em;
+        }
+
+        p {
+            margin: 0 0 1em 0;
+        }
+
+        a {
+            color: #0000F0;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        code {
+            background: #F5F5F5;
+            max-width: 100px;
+            padding: 2px 6px;
+            word-wrap: break-word;
+        }
+
+        #wrapper {
+            background: #FFF;
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+        }
+
+        #container {
+            padding: 2em;
+        }
+
+        #search {
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        .form-control{
+            width:20%;
+        }
+
+        @media (min-width: 768px) {
+            #wrapper {
+                width: 80%;
+                margin: 2em auto;
+            }
+
+            #icon-book {
+                display: inline-block;
+            }
+
+            #status a, #next a {
+                display: block;
+            }
+
+            @-webkit-keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            .sf-toolbar {
+                opacity: 0;
+                -webkit-animation: fade-in 1s .2s forwards;
+                animation: fade-in 1s .2s forwards;
+            }
+        }
+    </style>
+{% endblock %}
