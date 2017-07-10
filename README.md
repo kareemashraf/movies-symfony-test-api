@@ -1,4 +1,8 @@
-symfony-test
+TMDB test Project
 ============
 
-A Symfony project created on July 10, 2017, 9:16 am.
+by using Symfony 3
+TMDB API 
+
+to start : run the following command in the directorie's Terminal
+$  bin/console server:run
